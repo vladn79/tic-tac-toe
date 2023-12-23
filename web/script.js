@@ -1,4 +1,6 @@
 function animateDiagonal() {
+      const contContainer = document.querySelector('.cont');
+      const menuContainer = document.getElementById('menu');
       const canvas = document.getElementById('diagonalLineCanvas');
       const context = canvas.getContext('2d');
       const ticTacToeImage = document.getElementById('ticTacToeImage');
@@ -6,11 +8,11 @@ function animateDiagonal() {
       const canvasHeight = ticTacToeImage.height;
       canvas.width = canvasWidth;
       canvas.height = canvasHeight;
-    
-      const duration = 1500; 
+  
+      const duration = 1500;
       const lineWidth = 10;
       let startTime;
-    
+  
       function drawLine(progress) {
           context.clearRect(0, 0, canvasWidth, canvasHeight);
           context.beginPath();
@@ -20,18 +22,21 @@ function animateDiagonal() {
           context.lineWidth = lineWidth;
           context.stroke();
       }
-    
+  
       function animate(time) {
           if (!startTime) startTime = time;
           const progress = Math.min(1, (time - startTime) / duration);
-    
+  
           drawLine(progress);
-    
+  
           if (progress < 1) {
               requestAnimationFrame(animate);
+          } else {
+              contContainer.style.display = 'none';
+              menuContainer.style.display = 'block';
           }
       }
-    
+  
       requestAnimationFrame(animate);
   }
   
