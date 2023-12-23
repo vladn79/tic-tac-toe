@@ -12,6 +12,16 @@ body{
 
       margin: 0;
 }
+
+.cont img {
+      transition: transform 0.5s ease-in-out;
+  }
+
+canvas {
+      position: absolute;
+      top: 0;
+      left: 25;
+  }
 .button-40 {
       display: flex;
       justify-content: center;

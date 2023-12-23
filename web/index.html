@@ -7,11 +7,13 @@
       <script src="eel.js"></script>
       <link rel="stylesheet" type="text/css" href="styles/style.css">
       <link rel="icon" type="image/png" href="img/Tic-Tac-Toe-Game-grey.png">
+      <script src="script.js" defer></script>
 </head>
 <body>
       <div class="cont">
-            <img src="img/tic-tac-toe-icon-2048x2048-g58f0u84.png" width="500" height="500">
-            <button class="button-40" role="button">Start...</button>
+            <canvas id="diagonalLineCanvas"></canvas>
+            <img id="ticTacToeImage" src="img/tic-tac-toe-icon-2048x2048-g58f0u84.png" width="500" height="500">
+            <button class="button-40" role="button" onclick="animateDiagonal()">Start...</button>
       </div>
 </body>
 </html>
