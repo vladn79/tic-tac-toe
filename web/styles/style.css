@@ -65,3 +65,8 @@ canvas {
         padding: .75rem 1.5rem;
       }
     }
+
+    #menu {
+      display: none;
+  }
+  
